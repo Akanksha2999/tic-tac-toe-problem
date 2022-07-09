@@ -7,6 +7,11 @@ public class TicTacToeGame {
     public static char playerTurn;
     public static char computerTurn;
     public static char user = '1';
+    public static char userTurn;
+    public static int userPos;
+    public static int computerPos;
+    public static char exitCode = '0';
+    public static int turnCount;
     public static Scanner scanner = new Scanner(System.in);
 
     //Main method
@@ -14,7 +19,7 @@ public class TicTacToeGame {
         System.out.println("Welcome to Tic Tac Toe game");
         showBoard();
         player();
-
+        ticTacToe();
     }
 
     //Method to print the game board
@@ -30,4 +35,13 @@ public class TicTacToeGame {
         System.out.println("Enter your choice -> (X or O) only");
         return scanner.next().toUpperCase().charAt(0);
     }
+
+    //Board with empty spaces
+    public static void ticTacToe() {
+        for (int i = 0; i < gameBoard.length; i++) {
+
+            gameBoard[i] = ' ';
+        }
+    }
+
 }
