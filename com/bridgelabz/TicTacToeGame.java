@@ -4,6 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class TicTacToeGame {
+
     static char[] gameBoard = new char[10];
     static Scanner scanner = new Scanner(System.in);
     static char user = '1';
@@ -138,12 +139,19 @@ public class TicTacToeGame {
                     break;
                 default:
                     System.out.println("Choose correct number");
-
+                    return;
             }
-
+            winner(userTurn);
+        } else if (user == '2') {
+            turnCount = turnCount + 1;
+            System.out.println("Computer turn");
+            if (turnCount == 2 || turnCount == 3 || turnCount == 4)
+                blockUser();
+            else
+                computerMove();
+            winner(computerTurn);
         }
     }
-
 
     public static void computerMove() {
         boolean flag = false;
@@ -324,5 +332,4 @@ public class TicTacToeGame {
         } else
             computerMove();
     }
-
 }
