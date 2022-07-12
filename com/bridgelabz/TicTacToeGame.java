@@ -284,4 +284,45 @@ public class TicTacToeGame {
             exitCode = '1';
         }
     }
+
+    public static void blockUser() {
+        if (gameBoard[0] == userTurn && gameBoard[1] == userTurn) {
+            gameBoard[2] = computerTurn;
+        } else if (gameBoard[3] == userTurn && gameBoard[4] == userTurn) {
+            gameBoard[5] = computerTurn;
+        } else if (gameBoard[6] == userTurn && gameBoard[7] == userTurn) {
+            gameBoard[8] = computerTurn;
+        } else if (gameBoard[0] == userTurn && gameBoard[3] == userTurn) {
+            gameBoard[6] = computerTurn;
+        } else if (gameBoard[1] == userTurn && gameBoard[4] == userTurn) {
+            gameBoard[7] = computerTurn;
+        } else if (gameBoard[2] == userTurn && gameBoard[5] == userTurn) {
+            gameBoard[8] = computerTurn;
+        } else if (gameBoard[0] == userTurn && gameBoard[4] == userTurn) {
+            gameBoard[8] = computerTurn;
+        } else if (gameBoard[2] == userTurn && gameBoard[4] == userTurn) {
+            gameBoard[6] = computerTurn;
+        } else if (gameBoard[0] == userTurn && gameBoard[2] == userTurn) {
+            gameBoard[1] = computerTurn;
+        } else if (gameBoard[3] == userTurn && gameBoard[5] == userTurn) {
+            gameBoard[4] = computerTurn;
+        } else if (gameBoard[6] == userTurn && gameBoard[8] == userTurn) {
+            gameBoard[7] = computerTurn;
+        } else if (gameBoard[0] == userTurn && gameBoard[6] == userTurn) {
+            gameBoard[3] = computerTurn;
+        } else if (gameBoard[1] == userTurn && gameBoard[7] == userTurn) {
+            gameBoard[4] = computerTurn;
+        } else if (gameBoard[2] == userTurn && gameBoard[8] == userTurn) {
+            gameBoard[5] = computerTurn;
+        } else if (gameBoard[0] == userTurn && gameBoard[8] == userTurn) {
+            gameBoard[4] = computerTurn;
+        } else if (gameBoard[2] == userTurn && gameBoard[6] == userTurn) {
+            gameBoard[4] = computerTurn;
+        } else if (gameBoard[8] == userTurn && gameBoard[5] == userTurn) {
+            gameBoard[2] = computerTurn;
+
+        } else
+            computerMove();
+    }
+
 }
